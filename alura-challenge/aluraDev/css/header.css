@@ -1,0 +1,78 @@
+:root {
+    --darkblue: #051D3B;
+    --blue300: #5081FB;
+    --blue200: #7BA4FC;
+    --blue100: #96B9FD;
+    --blueinput: rgba(255, 255, 255, 0.16);
+    --white: #ffffff;
+}
+* {
+    font-family: 'Inter', sans-serif;
+}
+/*header*/
+.header {
+    background: var(--darkblue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo {
+    width: 15%;
+}
+#search {
+    width: 50%;
+    background: var(--blueinput);
+    border: none;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    color: var(--white);
+}
+#search::placeholder {
+    color: var(--white);
+    font-weight: 400;
+}
+#search:focus {
+    outline: none;
+}
+#perfil {
+    width: 10%;
+}
+/*main*/
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.menu {
+    background: var(--darkblue);
+    color: var(--white);
+}
+.menu h2 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.menu li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; 
+}
+.menu li img {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+}
+#code {
+    background: var(--blue300);
+}
+#comunidade {
+    background: var(--blueinput);
+    padding: 0.6rem;
+}
+.codigo {
+    background: blueviolet;
+}
+.projeto {
+    background: yellow;
+}
+
