@@ -30,10 +30,26 @@
             </ul>
         </aside>
         <section class="codigo">
-            texto
+            <div class="editor">
+                <textarea name="" id="ed" cols="30" rows="10"></textarea>
+            </div>
+            <button>Visualizar com highlight</button>
         </section>
         <aside class="projeto">
-            seu projeto
+            <form id="form">
+                <h2>seu projeto</h2>
+                <input type="text" name="nome" placeholder="Nome do seu projeto">
+                <input type="text" name="descricao" id="descricao" placeholder="Descrição do seu projeto">
+
+                <h2>Personalização</h2>
+                <select name="" id="">
+                    <option class="option" value="javascript">JavaScript</option>
+                    <option class="option" value="html">HTML</option>
+                    <option class="option" value="css">CSS</option>
+                </select>
+                <input type="color" name="" id="" value="#96B9FD">
+                <input type="submit" value="Salvar projeto">
+            </form>
         </aside>
     </main>
     
