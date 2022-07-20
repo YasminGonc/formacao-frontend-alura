@@ -1,0 +1,43 @@
+const form = document.querySelector('#novoItem'); //captura o formulário
+const lista = document.querySelector('#lista');
+const itens = JSON.parse(localStorage.getItem('itens')) || [];//acessar o local storage, caso esteja vazio criar um array vazio
+
+
+itens.forEach((elemento) => {
+    criaElemento(elemento);
+});
+
+form.addEventListener('submit', (evento) => {
+    evento.preventDefault(); //prevenindo o comportamento padrão do evento
+
+    const nome = evento.target.elements['nome'];//está pegando com o .target os valores colocados no input nome e quantidade, e usando esses valores como entrada da função criaElemento
+    const quantidade = evento.target.elements['quantidade'];
+
+    const itemAtual = {
+        'nome': nome.value,
+        'quantidade': quantidade.value
+    }
+
+    criaElemento(itemAtual); 
+
+    itens.push(itemAtual);
+
+    localStorage.setItem('itens', JSON.stringify(itens));
+
+    nome.value = ""; //limpa o nome
+    quantidade.value = ""; //limpa a quantidade
+});
+
+function criaElemento(item) {
+    const novoItem = document.createElement('li');
+    novoItem.classList.add('item');
+
+    const numeroItem = document.createElement('strong');
+    numeroItem.innerHTML = item.quantidade;
+
+    novoItem.appendChild(numeroItem);
+    novoItem.innerHTML += item.nome;
+
+    lista.appendChild(novoItem);
+
+}
