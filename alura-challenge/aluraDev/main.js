@@ -10,4 +10,4 @@ btnMobile.addEventListener('click', () => {
 
 btnLupa.addEventListener('click', () => {
     busca.classList.toggle('on');
-})
+});
