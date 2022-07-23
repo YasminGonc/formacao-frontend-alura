@@ -35,7 +35,8 @@ form.addEventListener('submit', (evento) => {
         'titulo': tituloProj.value,
         'descricao': descricaoProj.value,
         'linguagem': linguagem.value,
-        'cor': cor.value
+        'cor': cor.value,
+        'conteudo': areaCodigo.innerText
     }
 
     projeto.push(novoProjeto);

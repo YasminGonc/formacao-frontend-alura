@@ -71,12 +71,12 @@ main {
     padding: 1rem;
     color: white;
 }
-.card:hover .icon {
+/*.card:hover .icon {
     display: flex;
     transition: all 500ms;
-}
+}*/
 .icon {
-    display: none;
+    display: flex;
     align-items: center;
     gap: 0.8rem;
     transition: all 500ms;
