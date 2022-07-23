@@ -36,6 +36,9 @@ main {
     width: calc(100% - 1rem);
     border-radius: 0.5rem 0.5rem 0 0;
 }
+#dot {
+    padding: 0.5rem 0 0 0.5rem;
+}
 .card-preview-cod img {
     padding-left: 1rem;
 }
@@ -44,6 +47,7 @@ main {
     font-family: 'Source Code Pro', monospace;
     font-size: 0.8rem;
     color: white;
+    white-space: pre-wrap;
 }
 .preview {
     background: #303030;
@@ -79,13 +83,11 @@ main {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    width: min-content;
     transition: all 500ms;
 }
-#icon-perfil {
-    width: 30%;
-}
 #perfil {
-    width: 30%;
+    width: 40%;
 }
 @media screen and (max-width: 768px) {
     main {
