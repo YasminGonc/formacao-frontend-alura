@@ -21,7 +21,7 @@
  <p>Página inicial</p>
  ![image](https://user-images.githubusercontent.com/107756337/180663922-20e39f74-aef1-42a2-8c21-c4bb89f897f6.png)
  <p>Página comunidade</p>
- ![Capturar](https://user-images.githubusercontent.com/107756337/180665226-d802841e-4559-44eb-9e2a-369e19a72b99.JPG)
+ ![](/imagens-readme/comunidade.png)
  <h3>Site</h3>
  <a href="https://yasmingonc.github.io/formacao-frontend-alura/alura-challenge/aluraDev/" target="_blank">AluraDev</a>
  <h2> Processo </h2>
