@@ -68,23 +68,23 @@ main {
     font-weight: 200;
 }
 .card-social {
-    display: none;
+    display: flex;
+    visibility: hidden;
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
     color: white;
 }
-/*.card:hover .icon {
-    display: flex;
-    transition: all 500ms;
-}*/
-.icon {
+.icon, .icon-like {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     width: min-content;
     transition: all 500ms;
+}
+.heart {
+    cursor: pointer;
 }
 #perfil {
     width: 40%;

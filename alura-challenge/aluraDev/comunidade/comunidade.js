@@ -7,7 +7,7 @@ function criaCard(projeto) {
 
     const cardCode = document.createElement('div');
     cardCode.classList.add('card-preview-cod');
-    cardCode.style.background = projeto.cor; //preencher isso aqui dinamicamente 
+    cardCode.style.background = projeto.cor; 
     novoCard.appendChild(cardCode);
 
     const labelDots = document.createElement('label');
@@ -16,16 +16,16 @@ function criaCard(projeto) {
 
     const codigoWrapper = document.createElement('div');
     codigoWrapper.classList.add('codigo-wrapper');
-    codigoWrapper.innerHTML = `<code class="preview hljs" contenteditable="false" aria-label="Editor de código">${projeto.conteudo}</code>` //preencher isso aqui dinamicamente 
+    codigoWrapper.innerHTML = `<code class="preview hljs" contenteditable="false" aria-label="Editor de código">${projeto.conteudo}</code>` 
     cardCode.appendChild(codigoWrapper);
 
     const cardInfo = document.createElement('div');
     const titulo = document.createElement('h1');
     const descricao = document.createElement('p');
     cardInfo.classList.add('card-info');
-    titulo.innerText = projeto.titulo; //preencher isso aqui dinamicamente
+    titulo.innerText = projeto.titulo; 
     cardInfo.appendChild(titulo);
-    descricao.innerText = projeto.descricao; //preencher isso aqui dinamicamente
+    descricao.innerText = projeto.descricao; 
     cardInfo.appendChild(descricao);
     novoCard.appendChild(cardInfo);
 
@@ -33,12 +33,12 @@ function criaCard(projeto) {
     cardSocial.classList.add('card-social');
     const iconComent = document.createElement('div');
     iconComent.classList.add('icon');
-    iconComent.innerHTML = `<img src="../images/message-circle.svg" alt="Ícone mensagem"><span>1</span>` //talvez vai ter que mudar isso aqui por conta dos comentários
+    iconComent.innerHTML = `<img src="../images/message-circle.svg" alt="Ícone mensagem">` //talvez vai ter que mudar isso aqui por conta dos comentários
     cardSocial.appendChild(iconComent);
 
     const iconLike = document.createElement('div');
-    iconLike.classList.add('icon');
-    iconLike.innerHTML = `<img src="../images/heart.svg" alt="Ícone coração"><span>1</span>` //talvez vai ter que mudar isso aqui por conta dos comentários
+    iconLike.classList.add('icon-like');
+    iconLike.innerHTML = `<img src="../images/heart.svg" alt="Ícone coração" class="heart">` //talvez vai ter que mudar isso aqui por conta dos comentários
     cardSocial.appendChild(iconLike);
 
     const iconPerfil = document.createElement('div');
@@ -57,18 +57,18 @@ projetos.forEach((elemento) => {
 
 const card = document.querySelectorAll('.card');
 const cardSocial = document.querySelectorAll('.card-social');
+const heart = document.querySelectorAll('.heart');
+const divHeart = document.querySelectorAll('.icon-like');
 
-for(let i = 0; i <= card.length; i++) {
-    card[i].addEventListener('click', () => {
-        alert(i); //esse funcionou
-    })
-}
-/*for(let item of card) {
-    item.addEventListener('click', () => {
-       alert(card[item]);
-        /*for(let elemento of cardSocial) {
-            elemento.style.display = 'flex';
-        }
-        
-    })
+/*for(let i = 0; i <= card.length; i++) {
+    card[i].addEventListener('mouseover', () => {
+       cardSocial[i].style.visibility = 'visible';
+    });
+    card[i].addEventListener('mouseout', () => {
+        cardSocial[i].style.visibility = 'hidden';
+     });
+    heart[i].addEventListener('click', () => {
+        divHeart[i].innerHTML = `<img src="../images/heart-full.svg" alt="Ícone coração">`
+    });
 }*/
+
