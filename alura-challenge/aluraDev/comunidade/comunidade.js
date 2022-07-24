@@ -54,3 +54,15 @@ function criaCard(projeto) {
 projetos.forEach((elemento) => {
     criaCard(elemento);
 });
+
+const card = document.querySelectorAll('.card');
+const cardSocial = document.querySelectorAll('.card-social');
+
+for(let item of card) {
+    item.addEventListener('click', () => {
+        for(let elemento of cardSocial) {
+            elemento.style.display = 'flex';
+        }
+        
+    })
+}

@@ -68,7 +68,7 @@ main {
     font-weight: 200;
 }
 .card-social {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     gap: 1rem;

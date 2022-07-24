@@ -26,29 +26,39 @@ btnHighlight.addEventListener('click', () => {
 const form = document.querySelector('form');
 const tituloProj = document.querySelector('#titulo-proj');
 const descricaoProj = document.querySelector('#descricao-proj');
+const avisoProj = document.querySelector('.aviso-proj');
+const avisoDescricao = document.querySelector('.aviso-descricao');
+const avisoSalvar = document.querySelector('.aviso-salvar');
 const projeto = JSON.parse(localStorage.getItem('projeto')) || [];
 
 form.addEventListener('submit', (evento) => {
-    //evento.preventDefault();
-    
-    const novoProjeto = {
-        'titulo': tituloProj.value,
-        'descricao': descricaoProj.value,
-        'linguagem': linguagem.value,
-        'cor': cor.value,
-        'conteudo': areaCodigo.innerText
+    evento.preventDefault();
+
+    if (tituloProj.value.length <= 0) {
+        avisoProj.style.visibility = 'visible';
+    } else if (descricaoProj.value.length <= 0) {
+        avisoDescricao.style.visibility = 'visible';
+    } else {
+        const novoProjeto = {
+            'titulo': tituloProj.value,
+            'descricao': descricaoProj.value,
+            'linguagem': linguagem.value,
+            'cor': cor.value,
+            'conteudo': areaCodigo.innerText
+        }
+
+        projeto.push(novoProjeto);
+
+        tituloProj.value = '';
+        descricaoProj.value = '';
+        linguagem.value = '';
+        cor.value = '#96B9FD';
+
+        window.alert('Projeto salvo com sucesso!');
+
+        //localStorage.setItem('projeto', JSON.stringify(projeto));
+
     }
-
-    projeto.push(novoProjeto);
-
-    /*tituloProj.value = '';
-    descricaoProj.value = '';
-    linguagem.value = '';
-    cor.value = '#96B9FD';*/
-
-    window.alert('Projeto salvo');
-
-    localStorage.setItem('projeto', JSON.stringify(projeto));
 
     //console.log(projeto);
 });

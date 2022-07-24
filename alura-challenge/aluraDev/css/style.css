@@ -176,6 +176,13 @@ form {
     text-transform: uppercase;
     padding-right: 1rem;
 }
+.aviso-proj, .aviso-descricao {
+    visibility: hidden;
+    color: red;
+    font-size: 0.5rem;
+    text-align: right;
+    margin-bottom: -0.7rem;
+}
 form input[type="text"], form select {
     background-color: var(--blueinputhover);
     border: none;
@@ -183,6 +190,9 @@ form input[type="text"], form select {
     height: 1.5rem;
     padding-left: 0.5rem;
     color: var(--white); 
+}
+#descricao-proj {
+    height: 4rem;
 }
 form input[type="text"]:hover, form select:hover {
     background-color: var(--blueinputborder);
@@ -245,7 +255,7 @@ form input[type="submit"]:active {
         padding: 2rem 0 0 2rem;
         position: absolute;
         width: 25%;
-        height: 100vh;
+        height: 50vh;
         top: 4rem;
         right: 0;
         z-index: 100;
@@ -291,8 +301,8 @@ form input[type="submit"]:active {
         margin-top: 2rem;
     }
     .redes {
+        width: min-content;
         display: flex;
-        padding-right: 2rem;
         gap: 2rem;
         margin-top: 2rem;
     }
@@ -352,6 +362,7 @@ form input[type="submit"]:active {
     }
     .menu-mobile.on {
         width: 40%;
+        height: 30vh;
     }
     .personalizacao {
         flex-direction: column;
