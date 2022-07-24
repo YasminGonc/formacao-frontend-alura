@@ -46,6 +46,8 @@ form.addEventListener('submit', (evento) => {
     linguagem.value = '';
     cor.value = '#96B9FD';*/
 
+    window.alert('Projeto salvo');
+
     localStorage.setItem('projeto', JSON.stringify(projeto));
 
     //console.log(projeto);
