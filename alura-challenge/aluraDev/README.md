@@ -23,7 +23,7 @@
  <p>Página comunidade</p>
  ![image](https://user-images.githubusercontent.com/107756337/180663952-ee5c5f44-e3a6-4615-b25a-e2abd4247c0b.png)
  <h3>Site</h3>
- <a href="https://highlightjs.org/" target="_blank">Yasmin</a>
+ https://yasmingonc.github.io/formacao-frontend-alura/alura-challenge/aluraDev/
  <h2> Processo </h2>
  <h3>Construído com:</h3>
  <ul>
