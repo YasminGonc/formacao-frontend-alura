@@ -17,11 +17,6 @@
  <li>Visualizar o projeto na aba comunidades;</li>
  <li>Projetos ficaram salvos na aba comunidades.</li>
  </ul>
- <h3>Screenshot</h3>
- <p>Página inicial</p>
- ![image](https://user-images.githubusercontent.com/107756337/180663922-20e39f74-aef1-42a2-8c21-c4bb89f897f6.png)
- <p>Página comunidade</p>
- ![comunidade](https://user-images.githubusercontent.com/107756337/180665415-2055bfa1-51c4-4f17-ba96-1c00caa08100.JPG)
  <h3>Site</h3>
  <a href="https://yasmingonc.github.io/formacao-frontend-alura/alura-challenge/aluraDev/" target="_blank">AluraDev</a>
  <h2> Processo </h2>
