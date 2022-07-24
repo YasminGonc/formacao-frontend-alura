@@ -60,7 +60,7 @@ const cardSocial = document.querySelectorAll('.card-social');
 const heart = document.querySelectorAll('.heart');
 const divHeart = document.querySelectorAll('.icon-like');
 
-/*for(let i = 0; i <= card.length; i++) {
+for(let i = 0; i <= card.length; i++) {
     card[i].addEventListener('mouseover', () => {
        cardSocial[i].style.visibility = 'visible';
     });
@@ -70,5 +70,5 @@ const divHeart = document.querySelectorAll('.icon-like');
     heart[i].addEventListener('click', () => {
         divHeart[i].innerHTML = `<img src="../images/heart-full.svg" alt="Ícone coração">`
     });
-}*/
+}
 
