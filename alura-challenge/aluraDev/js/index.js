@@ -56,10 +56,9 @@ form.addEventListener('submit', (evento) => {
 
         window.alert('Projeto salvo com sucesso!');
 
-        //localStorage.setItem('projeto', JSON.stringify(projeto));
+        localStorage.setItem('projeto', JSON.stringify(projeto));
 
     }
 
-    //console.log(projeto);
 });
 
