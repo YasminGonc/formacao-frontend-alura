@@ -93,14 +93,19 @@ main {
 @media screen and (max-width: 768px) {
     main {
         align-items: center;
-        padding: 2rem 0rem;
+        padding: 2rem 0;
     }
     .card-container {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         width: 80%;
         padding: 0;
     }
+    body {
+        width: 100%;
+    }
+   
 }
 @media screen and (max-width: 425px) {
     .card-container {

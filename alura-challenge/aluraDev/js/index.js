@@ -34,6 +34,9 @@ const projeto = JSON.parse(localStorage.getItem('projeto')) || [];
 form.addEventListener('submit', (evento) => {
     evento.preventDefault();
 
+    avisoProj.style.visibility = 'hidden';
+    avisoDescricao.style.visibility = 'hidden';
+
     if (tituloProj.value.length <= 0) {
         avisoProj.style.visibility = 'visible';
     } else if (descricaoProj.value.length <= 0) {
@@ -53,6 +56,7 @@ form.addEventListener('submit', (evento) => {
         descricaoProj.value = '';
         linguagem.value = '';
         cor.value = '#96B9FD';
+        areaCodigo.innerHTML = `<code class="preview hljs" contenteditable="true" aria-label="Editor de código"></code>`;
 
         window.alert('Projeto salvo com sucesso!');
 
