@@ -75,6 +75,7 @@ main {
     gap: 1rem;
     padding: 1rem;
     color: white;
+    transition: 1ms;
 }
 .icon, .icon-like {
     display: flex;
