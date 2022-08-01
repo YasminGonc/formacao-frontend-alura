@@ -54,10 +54,16 @@
 .botoes__item {
     margin: 0 0.5em;
 }
-.botpes__ancora {
+.botoes__ancora {
     background-color: var(--amarelo);
     padding: 1em 2.2em;
     color: var(--branco);
     font-weight: 700;
     text-decoration: none;
+}
+.descricao__imagem-estrelas {
+    margin: 0.5em 0;
+}
+.descricao {
+    margin-right: 0.5rem;
 }
