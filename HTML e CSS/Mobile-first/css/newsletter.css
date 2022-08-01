@@ -10,7 +10,7 @@
     font-weight: 300;
     margin: 1em 0;
 }
-.newsletter__busca {
+.newsletter__email {
     background-color: transparent;
     border: 1px solid var(--azul);
     color: var(--branco);
@@ -18,7 +18,7 @@
     padding: 1em;
     width: 100%;
 }
-.newsletter__busca::placeholder {
+.newsletter__email::placeholder {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -27,3 +27,23 @@
     background: url(../images/Email.svg) no-repeat;
     background-position: 1em;
 }
+
+@media screen and (min-width: 1024px) {
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        padding: 2em 4em;
+    }
+    .newsletter__email {
+        width: 30%;
+    }
+    .newsletter__titulo {
+        font-size: 24px;
+    }
+    .newsletter__descricao {
+        width: 30%;
+    }
+}
+
