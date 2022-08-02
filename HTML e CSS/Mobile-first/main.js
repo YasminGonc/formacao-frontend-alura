@@ -6,9 +6,10 @@ btnMenu.addEventListener('click', () => {
 });
 
 const btnMenuCategorias = document.querySelector(".opcoes__item-menu");
+const listaMenuTablet = document.querySelector(".lista-menu-tablet");
 
 btnMenuCategorias.addEventListener('click', () => {
-    listaMenu.classList.toggle('on');
+    listaMenuTablet.classList.toggle('on');
 });
 
 const swiper = new Swiper('.swiper', {
