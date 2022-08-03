@@ -1,4 +1,9 @@
 # 1º Challege Alura: Alura-Dev Editor de código
+ <div>
+ <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" target="_blank">
+ <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" target="_blank">
+ <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" target="_blank">
+ </div>
  Alura Dev é um editor de código criado no primeiro challenge de front-end da Alura. O Alura Dev permite que você compartilhe seus códigos de maneira mais atraente, salvando os projetos na aba comunidade.
  ## Como utilizar
  <ul>
