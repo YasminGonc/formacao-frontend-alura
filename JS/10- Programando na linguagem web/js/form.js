@@ -73,13 +73,17 @@ function exibeMensagensDeErros(erros) {
     });
 }
 
+function adicionaPacienteNaTabela(paciente) {
+    const pacienteTr = montaTr(paciente);
+    const tabela = document.querySelector('#tabela-pacientes');
+    tabela.appendChild(pacienteTr);
+}
+
 botaoAdicionar.addEventListener('click', (evento) => {
     evento.preventDefault();
 
     const form = document.querySelector('#form-adiciona');
     const paciente = obtemPacienteDoFormulario(form);
-
-    const pacienteTr = montaTr(paciente);
 
     var erros = validaPaciente(paciente);
 
@@ -94,10 +98,8 @@ botaoAdicionar.addEventListener('click', (evento) => {
         return;
     }
 
-    const tabela = document.querySelector('#tabela-pacientes');
-
-    tabela.appendChild(pacienteTr);
-
+    adicionaPacienteNaTabela(paciente);
+ 
     form.reset();
 
    const mensagensErro = document.querySelector('#mensagens-erro');
