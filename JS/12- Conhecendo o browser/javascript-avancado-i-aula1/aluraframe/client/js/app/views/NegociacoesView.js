@@ -1,9 +1,9 @@
-class NegociacoesView {
+class NegociacoesView extends View{
     constructor(elemento) {
-        this._elemento = elemento;
+        super(elemento);
     }
 
-    _template() {
+    template(model) {
         return `
         <table class="table table-hover table-bordered">
             <thead>
@@ -15,16 +15,29 @@ class NegociacoesView {
                 </tr>
             </thead>
         
-        <tbody>
-        </tbody>
-        
-        <tfoot>
-        </tfoot>
+            <tbody>
+                ${model.negociacoes.map((n) => {
+                    return `
+                        <tr>
+                            <td>${DateHelper.dataParaTexto(n.data)}</td>
+                            <td>${n.quantidade}</td>
+                            <td>${n.valor}</td>
+                            <td>${n.volume}</td>
+                        </tr>
+                    `
+                }).join('')}
+            </tbody>
+            
+            <tfoot>
+                <td colspan="3"></td>
+                <td>${
+                    model.negociacoes.reduce(function(total, n) {
+                        return total + n.volume;
+                    }, 0.0)
+                    }</td>
+            </tfoot>
         </table>
         `
     }
-
-    update() {
-        this._elemento.innerHTML = this._template();
-    }
+    // a função map devolve um array com strings, por isso precisei usar o .join para transformar os elementos desse array em apenas uma string 
 }
