@@ -10,16 +10,8 @@ class NegociacaoController {
     adiciona(event) {
         event.preventDefault();
 
-        let data = new Date(...
-            this._inputData.value
-                .split('-')
-                .map((item, indice) => {
-                    if (indice ==1 ) {
-                        return item - 1;
-                    }
-                    return item;
-                })
-        );
+        let helper = new DateHelper();
+        let data = helper.textoParaData(this._inputData.value);
 
         let negociacao = new Negociacao(
             data,
@@ -27,6 +19,9 @@ class NegociacaoController {
             this._inputValor.value
         );
 
+        let diaMesAno = helper.dataParaTexto(negociacao.data);
+
         console.log(negociacao);
+        console.log(diaMesAno);
     }
 }
