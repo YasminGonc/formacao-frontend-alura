@@ -1,4 +1,5 @@
 import { DiasDaSemana } from "../enums/dias-da-semana.js";
+import { NegociacoesDoDia } from "../interfaces/negociacoes-do-dia.js";
 import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { MensagemView } from "../views/mensagem-view.js";
@@ -30,6 +31,24 @@ export class NegociacaoController {
             this.limparFormulario();
             this.atualizaView();
         }
+    }
+
+    public async importarDados(): Promise<void> {
+        let dadosApi = await fetch('http://localhost:8080/dados');
+        let dadosApiConvertido: NegociacoesDoDia[] = await dadosApi.json(); //montante é uma interface, apenas os parâmetros definidos na interface poderam ser usados. A vantagem de usar com uma API é que outro desenvolvedor não vai conseguir chamar um dado que não existe. Documenta no front o que está esperando do back.Antes de NegociacoesDia[] era Array<any>
+
+        let dadosNegociacao = dadosApiConvertido.map(dado => {
+            return new Negociacao(new Date(), dado.vezes, dado.montante);
+        });
+
+        dadosNegociacao.forEach(negociacao => {
+            this.negociacoes.adiciona(negociacao);
+        });
+        this.negociacoesView.update(this.negociacoes);
+
+        
+        console.log(dadosNegociacao);
+           
     }
 
     private ehDiaUtil(data: Date): boolean {
