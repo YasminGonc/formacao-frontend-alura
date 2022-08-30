@@ -22,4 +22,10 @@ export class Negociacao {
         const valor = parseFloat(valorString);
         return new Negociacao(date, quantidade, valor);
     }
+
+    public ehIgual(negociacao: Negociacao): boolean {
+        return this.data.getDate() === negociacao.data.getDate() 
+        && this.data.getMonth() === negociacao.data.getMonth() 
+        && this.data.getFullYear() === negociacao.data.getFullYear(); 
+    }
 }
